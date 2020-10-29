@@ -2,7 +2,7 @@ specVersion: 0.0.2
 description: pos exit subgraph
 repository: https://github.com/Aveesh52/pos-exit-subgraph
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 dataSources:
   - kind: ethereum/contract
     name: POS Exit Subgraph
@@ -17,8 +17,8 @@ dataSources:
         - TransferEntity
       abis:
         - name: childerc20
-          file: ./abis/childerc20.json
+          file: POS Exit Subgraph/abis/childerc20.json
       eventHandlers:
-         - event: Transfer(indexed address,indexed address,uint256)
-           handler: handleTransfer
-      file: ./src/mapping.ts
+        - event: Transfer(indexed address,indexed address,uint256)
+          handler: handleTransfer
+      file: POS Exit Subgraph/POS Exit Subgraph.wasm
